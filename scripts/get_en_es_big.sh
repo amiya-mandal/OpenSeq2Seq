@@ -30,21 +30,21 @@ then
 
 mkdir -p $OUTPUT_DIR_DATA
 
-echo "Downloading ParaCrawl Corpus v1.2. This may take a while..."
-curl -o ${OUTPUT_DIR_DATA}/paracrawl-v1-2-es-en.tgz \
-  https://s3.amazonaws.com/web-language-models/paracrawl/release1/paracrawl-release1.en-es.zipporah0-dedup-clean.tgz
+# echo "Downloading ParaCrawl Corpus v1.2. This may take a while..."
+# curl -o ${OUTPUT_DIR_DATA}/paracrawl-v1-2-es-en.tgz \
+  # https://s3.amazonaws.com/web-language-models/paracrawl/release1/paracrawl-release1.en-es.zipporah0-dedup-clean.tgz
 
 echo "Downloading Europarl v7. This may take a while..."
 curl -o ${OUTPUT_DIR_DATA}/europarl-v7-es-en.tgz \
   http://www.statmt.org/europarl/v7/es-en.tgz
 
-echo "Downloading Common Crawl corpus. This may take a while..."
-curl -o ${OUTPUT_DIR_DATA}/common-crawl.tgz \
-  http://www.statmt.org/wmt13/training-parallel-commoncrawl.tgz
+# echo "Downloading Common Crawl corpus. This may take a while..."
+# curl -o ${OUTPUT_DIR_DATA}/common-crawl.tgz \
+#   http://www.statmt.org/wmt13/training-parallel-commoncrawl.tgz
 
-echo "Downloading News Commentary v11. This may take a while..."
-curl -o ${OUTPUT_DIR_DATA}/nc-v11.tgz \
-  http://data.statmt.org/wmt16/translation-task/training-parallel-nc-v11.tgz
+# echo "Downloading News Commentary v11. This may take a while..."
+# curl -o ${OUTPUT_DIR_DATA}/nc-v11.tgz \
+#   http://data.statmt.org/wmt16/translation-task/training-parallel-nc-v11.tgz
 
 echo "Downloading dev/test sets"
 curl -o ${OUTPUT_DIR_DATA}/dev.tgz \
@@ -59,10 +59,10 @@ tar -xvzf "${OUTPUT_DIR_DATA}/paracrawl-v1-2-es-en.tgz" -C "${OUTPUT_DIR_DATA}/p
 
 mkdir -p "${OUTPUT_DIR_DATA}/europarl-v7-es-en"
 tar -xvzf "${OUTPUT_DIR_DATA}/europarl-v7-es-en.tgz" -C "${OUTPUT_DIR_DATA}/europarl-v7-es-en"
-mkdir -p "${OUTPUT_DIR_DATA}/common-crawl"
-tar -xvzf "${OUTPUT_DIR_DATA}/common-crawl.tgz" -C "${OUTPUT_DIR_DATA}/common-crawl"
-mkdir -p "${OUTPUT_DIR_DATA}/nc-v11"
-tar -xvzf "${OUTPUT_DIR_DATA}/nc-v11.tgz" -C "${OUTPUT_DIR_DATA}/nc-v11"
+# mkdir -p "${OUTPUT_DIR_DATA}/common-crawl"
+# tar -xvzf "${OUTPUT_DIR_DATA}/common-crawl.tgz" -C "${OUTPUT_DIR_DATA}/common-crawl"
+# mkdir -p "${OUTPUT_DIR_DATA}/nc-v11"
+# tar -xvzf "${OUTPUT_DIR_DATA}/nc-v11.tgz" -C "${OUTPUT_DIR_DATA}/nc-v11"
 mkdir -p "${OUTPUT_DIR_DATA}/dev"
 tar -xvzf "${OUTPUT_DIR_DATA}/dev.tgz" -C "${OUTPUT_DIR_DATA}/dev"
 mkdir -p "${OUTPUT_DIR_DATA}/test"
@@ -74,28 +74,28 @@ fi
 #  "${OUTPUT_DIR_DATA}/nc-v11/training-parallel-nc-v11/news-commentary-v11.es-en.en" \
 # Concatenate Training data
 cat "${OUTPUT_DIR_DATA}/europarl-v7-es-en/europarl-v7.es-en.en" \
-  "${OUTPUT_DIR_DATA}/paracrawl-v1-2-es-en/paracrawl-release1.en-es.zipporah0-dedup-clean.en" \
-  "${OUTPUT_DIR_DATA}/common-crawl/commoncrawl.es-en.en" \
+  # "${OUTPUT_DIR_DATA}/paracrawl-v1-2-es-en/paracrawl-release1.en-es.zipporah0-dedup-clean.en" \
+  # "${OUTPUT_DIR_DATA}/common-crawl/commoncrawl.es-en.en" \
   > "${OUTPUT_DIR}/train.en"
 wc -l "${OUTPUT_DIR}/train.en"
 
 cat "${OUTPUT_DIR_DATA}/europarl-v7-es-en/europarl-v7.es-en.es" \
-  "${OUTPUT_DIR_DATA}/paracrawl-v1-2-es-en/paracrawl-release1.en-es.zipporah0-dedup-clean.es" \
-  "${OUTPUT_DIR_DATA}/common-crawl/commoncrawl.es-en.es" \
+  # "${OUTPUT_DIR_DATA}/paracrawl-v1-2-es-en/paracrawl-release1.en-es.zipporah0-dedup-clean.es" \
+  # "${OUTPUT_DIR_DATA}/common-crawl/commoncrawl.es-en.es" \
   > "${OUTPUT_DIR}/train.es"
 wc -l "${OUTPUT_DIR}/train.es"
 
 
 # Concatenate Training data
 cat "${OUTPUT_DIR_DATA}/europarl-v7-es-en/europarl-v7.es-en.en" \
-  "${OUTPUT_DIR_DATA}/paracrawl-v1-2-es-en/paracrawl-release1.en-es.zipporah0-dedup-clean.en" \
-  "${OUTPUT_DIR_DATA}/common-crawl/commoncrawl.es-en.en" \
+  # "${OUTPUT_DIR_DATA}/paracrawl-v1-2-es-en/paracrawl-release1.en-es.zipporah0-dedup-clean.en" \
+  # "${OUTPUT_DIR_DATA}/common-crawl/commoncrawl.es-en.en" \
   > "${OUTPUT_DIR}/train.small.en"
 wc -l "${OUTPUT_DIR}/train.small.en"
 
 cat "${OUTPUT_DIR_DATA}/europarl-v7-es-en/europarl-v7.es-en.es" \
-  "${OUTPUT_DIR_DATA}/paracrawl-v1-2-es-en/paracrawl-release1.en-es.zipporah0-dedup-clean.es" \
-  "${OUTPUT_DIR_DATA}/common-crawl/commoncrawl.es-en.es" \
+  # "${OUTPUT_DIR_DATA}/paracrawl-v1-2-es-en/paracrawl-release1.en-es.zipporah0-dedup-clean.es" \
+  # "${OUTPUT_DIR_DATA}/common-crawl/commoncrawl.es-en.es" \
   > "${OUTPUT_DIR}/train.small.es"
 wc -l "${OUTPUT_DIR}/train.small.es"
 
