@@ -73,30 +73,26 @@ fi
 
 #  "${OUTPUT_DIR_DATA}/nc-v11/training-parallel-nc-v11/news-commentary-v11.es-en.en" \
 # Concatenate Training data
-cat "${OUTPUT_DIR_DATA}/europarl-v7-es-en/europarl-v7.es-en.en" \
+cat "${OUTPUT_DIR_DATA}/europarl-v7-es-en/europarl-v7.es-en.en" > "${OUTPUT_DIR}/train.en"
   # "${OUTPUT_DIR_DATA}/paracrawl-v1-2-es-en/paracrawl-release1.en-es.zipporah0-dedup-clean.en" \
   # "${OUTPUT_DIR_DATA}/common-crawl/commoncrawl.es-en.en" \
-  > "${OUTPUT_DIR}/train.en"
 wc -l "${OUTPUT_DIR}/train.en"
 
-cat "${OUTPUT_DIR_DATA}/europarl-v7-es-en/europarl-v7.es-en.es" \
+cat "${OUTPUT_DIR_DATA}/europarl-v7-es-en/europarl-v7.es-en.es" > "${OUTPUT_DIR}/train.es"
   # "${OUTPUT_DIR_DATA}/paracrawl-v1-2-es-en/paracrawl-release1.en-es.zipporah0-dedup-clean.es" \
   # "${OUTPUT_DIR_DATA}/common-crawl/commoncrawl.es-en.es" \
-  > "${OUTPUT_DIR}/train.es"
 wc -l "${OUTPUT_DIR}/train.es"
 
 
 # Concatenate Training data
-cat "${OUTPUT_DIR_DATA}/europarl-v7-es-en/europarl-v7.es-en.en" \
+cat "${OUTPUT_DIR_DATA}/europarl-v7-es-en/europarl-v7.es-en.en" > "${OUTPUT_DIR}/train.small.en"
   # "${OUTPUT_DIR_DATA}/paracrawl-v1-2-es-en/paracrawl-release1.en-es.zipporah0-dedup-clean.en" \
   # "${OUTPUT_DIR_DATA}/common-crawl/commoncrawl.es-en.en" \
-  > "${OUTPUT_DIR}/train.small.en"
 wc -l "${OUTPUT_DIR}/train.small.en"
 
-cat "${OUTPUT_DIR_DATA}/europarl-v7-es-en/europarl-v7.es-en.es" \
+cat "${OUTPUT_DIR_DATA}/europarl-v7-es-en/europarl-v7.es-en.es" > "${OUTPUT_DIR}/train.small.es"
   # "${OUTPUT_DIR_DATA}/paracrawl-v1-2-es-en/paracrawl-release1.en-es.zipporah0-dedup-clean.es" \
   # "${OUTPUT_DIR_DATA}/common-crawl/commoncrawl.es-en.es" \
-  > "${OUTPUT_DIR}/train.small.es"
 wc -l "${OUTPUT_DIR}/train.small.es"
 
 
