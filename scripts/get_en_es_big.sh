@@ -54,8 +54,8 @@ curl -o ${OUTPUT_DIR_DATA}/test.tgz \
 
 # Extract everything
 echo "Extracting all files..."
-mkdir -p "${OUTPUT_DIR_DATA}/paracrawl-v1-2-es-en"
-tar -xvzf "${OUTPUT_DIR_DATA}/paracrawl-v1-2-es-en.tgz" -C "${OUTPUT_DIR_DATA}/paracrawl-v1-2-es-en"
+# mkdir -p "${OUTPUT_DIR_DATA}/paracrawl-v1-2-es-en"
+# tar -xvzf "${OUTPUT_DIR_DATA}/paracrawl-v1-2-es-en.tgz" -C "${OUTPUT_DIR_DATA}/paracrawl-v1-2-es-en"
 
 mkdir -p "${OUTPUT_DIR_DATA}/europarl-v7-es-en"
 tar -xvzf "${OUTPUT_DIR_DATA}/europarl-v7-es-en.tgz" -C "${OUTPUT_DIR_DATA}/europarl-v7-es-en"
