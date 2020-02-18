@@ -44,8 +44,8 @@ def tokenize(args):
   sp2.Load(model_prefix2 + ".model")
 
   ind = 0
-  with open(input_file1, 'r') as file1, open(input_file2, 'r') as file2:
-    with open(tokenized_output1, 'w') as ofile1, open(tokenized_output2, 'w') as ofile2:
+  with open(input_file1, 'r', encoding="utf8") as file1, open(input_file2, 'r', encoding="utf8") as file2:
+    with open(tokenized_output1, 'w', encoding="utf8") as ofile1, open(tokenized_output2, 'w', encoding="utf8") as ofile2:
       while True: # YaY!
         _src_raw = file1.readline()
         _tgt_raw = file2.readline()
